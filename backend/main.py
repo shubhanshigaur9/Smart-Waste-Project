@@ -177,6 +177,6 @@ async def analyze_image(
 
 
 if not FRONTEND.is_dir():
-    raise RuntimeError(f"Frontend directory not found: {FRONTEND}")
+    FRONTEND = ROOT.parent / "frontend"
 
 app.mount("/", StaticFiles(directory=FRONTEND, html=True), name="frontend")
