@@ -1,0 +1,122 @@
+{
+  "version": "1.0",
+  "context_guidance": {
+    "home curbside": "Follow the current accepted-material list from your curbside provider.",
+    "public bin": "Read the labels on the public station because its collection options may differ from household bins.",
+    "workplace": "Use the collection labels and instructions provided for your workplace.",
+    "community collection point": "Ask the collection point whether it accepts this item before leaving it there."
+  },
+  "rules": [
+    {
+      "id": "battery-e-waste",
+      "items": ["battery", "batteries", "laptop", "phone", "smartphone", "charger", "cable", "earbuds", "headphones", "electronics", "electronic device", "circuit board", "tablet", "power bank", "light bulb", "fluorescent bulb"],
+      "materials": ["lithium ion battery", "electronic components", "circuit board"],
+      "recommendation": "Take it to an e-waste or battery collection point",
+      "reason": "Electronics and batteries can contain materials that are valuable to recover and harmful when they leak into household waste. Keep this item out of curbside bins and use a designated collection point.",
+      "preparation": "Keep batteries intact, cover exposed terminals when practical, and check your local collection service before drop-off.",
+      "local_check": true
+    },
+    {
+      "id": "broken-glass",
+      "items": ["broken glass", "glass shards", "shattered glass"],
+      "recommendation": "Wrap securely and follow local broken-glass guidance",
+      "reason": "Loose broken glass can injure collection workers and is often excluded from glass recycling bins. Keep it separate from bottles and jars.",
+      "preparation": "Wrap the pieces in thick paper or cardboard, seal them in a sturdy container, and label it clearly.",
+      "local_check": true
+    },
+    {
+      "id": "organic-compost",
+      "items": ["food scraps", "food waste", "fruit peel", "vegetable scraps", "coffee grounds", "tea leaves", "eggshell", "yard waste", "leaves", "plant trimmings", "organic waste"],
+      "materials": ["food scraps", "plant matter", "yard debris"],
+      "recommendation": "Compost it where a suitable service is available",
+      "reason": "Food and garden scraps can become useful compost instead of taking up space in landfill. Accepted materials differ between home composters and municipal programs.",
+      "preparation": "Remove stickers and packaging. Keep meat, dairy, and oily foods out of a home compost pile unless your service explicitly accepts them.",
+      "local_check": true
+    },
+    {
+      "id": "paper-towels-and-tissues",
+      "items": ["paper towel", "paper napkin", "tissue", "facial tissue"],
+      "conditions": ["clean", "dry", "empty"],
+      "recommendation": "Compost or place it in general waste, depending on local rules",
+      "reason": "Paper towels and tissues have short fibers that are generally unsuitable for paper recycling. Some organics programs accept them when they are free of harsh cleaners.",
+      "preparation": "Keep them out of the paper recycling bin. Check whether your compost service accepts used paper towels and tissues.",
+      "local_check": true
+    },
+    {
+      "id": "greasy-paper",
+      "items": ["pizza box", "greasy cardboard", "food-stained paper", "paper napkin", "paper towel", "tissue"],
+      "recommendation": "Compost the soiled part or place it in general waste",
+      "reason": "Food and grease can lower the quality of paper recycling. Some local compost programs accept uncoated food-soiled paper; others do not.",
+      "preparation": "Separate clean cardboard from greasy sections when possible, then check the accepted-material list for your local program.",
+      "local_check": true
+    },
+    {
+      "id": "paper-clean",
+      "items": ["paper", "newspaper", "magazine", "cardboard", "carton", "paperboard", "envelope", "book", "mail", "paper packaging"],
+      "materials": ["paper", "cardboard", "paperboard"],
+      "conditions": ["clean", "dry", "empty"],
+      "recommendation": "Recycle with paper and cardboard",
+      "reason": "Clean, dry paper fibers can usually be recovered into new paper products. Wet or food-soiled paper is harder to process.",
+      "preparation": "Keep it dry, flatten boxes, and remove plastic liners or excess tape when you can.",
+      "local_check": true
+    },
+    {
+      "id": "plastic-film",
+      "items": ["plastic bag", "shopping bag", "plastic film", "bubble wrap", "bread bag", "plastic wrapper", "cling film", "soft plastic"],
+      "recommendation": "Use a soft-plastics collection point if available",
+      "reason": "Flexible films can tangle sorting equipment and are not accepted in many curbside recycling bins, even when the material is recyclable elsewhere.",
+      "preparation": "Keep the film clean and dry, bundle it only if your collection program asks you to, and check local drop-off options.",
+      "local_check": true
+    },
+    {
+      "id": "plastic-clean",
+      "items": ["plastic bottle", "water bottle", "soda bottle", "milk jug", "detergent bottle", "plastic container", "food tub", "yogurt cup", "plastic jar"],
+      "materials": ["pet plastic", "hdpe plastic", "rigid plastic"],
+      "conditions": ["clean", "empty"],
+      "recommendation": "Recycle in the plastics bin if your local program accepts it",
+      "reason": "Rigid plastic containers such as PET bottles are commonly recyclable, but accepted resin types vary by location. A quick rinse helps keep other recyclables clean.",
+      "preparation": "Empty and rinse the container. Check local guidance for caps and labels, then place it loose in the recycling bin.",
+      "local_check": true
+    },
+    {
+      "id": "plastic-soiled",
+      "items": ["plastic bottle", "water bottle", "plastic container", "food tub", "yogurt cup", "plastic packaging"],
+      "recommendation": "Empty and rinse it before recycling if accepted locally",
+      "reason": "Leftover food or liquid can contaminate a recycling load. If the item cannot be cleaned, follow local guidance for soiled packaging.",
+      "preparation": "Pour out liquids, scrape out food, and give the container a quick rinse. Do not recycle heavily contaminated packaging unless your local service permits it.",
+      "local_check": true
+    },
+    {
+      "id": "glass-container",
+      "items": ["glass bottle", "glass jar", "glass container", "wine bottle", "beverage bottle"],
+      "materials": ["glass"],
+      "recommendation": "Recycle as glass if your local program accepts containers",
+      "reason": "Glass bottles and jars can often be recycled repeatedly, though some curbside programs do not collect glass or have separate drop-off sites.",
+      "preparation": "Empty and rinse the container. Keep drinking glasses, mirrors, ceramics, and window glass out of bottle-and-jar recycling.",
+      "local_check": true
+    },
+    {
+      "id": "metal-container",
+      "items": ["aluminum can", "tin can", "steel can", "metal can", "food can", "drink can", "aluminium can", "metal lid", "metal container"],
+      "materials": ["aluminum", "aluminium", "steel", "metal"],
+      "recommendation": "Recycle with metal containers if accepted locally",
+      "reason": "Metal containers are widely recyclable, and recovering the material saves the resources needed to make new metal.",
+      "preparation": "Empty and rinse the can. Avoid flattening it unless your local program recommends that step.",
+      "local_check": true
+    },
+    {
+      "id": "textiles",
+      "items": ["clothing", "shirt", "fabric", "textile", "shoes", "sneakers", "towel", "bedding"],
+      "recommendation": "Donate, repair, or use a textile collection program",
+      "reason": "Wearable items can have another life, and damaged textiles may be accepted by specialist collection programs. Textile collection options vary locally.",
+      "preparation": "Keep donated items clean and dry. If they are torn or worn out, check whether a textile recycler accepts them.",
+      "local_check": true
+    }
+  ],
+  "fallback": {
+    "recommendation": "Check the item label and your local waste guidance",
+    "reason": "This item does not match a disposal rule with enough certainty. Packaging labels and local collection lists are the best next checks, especially for mixed-material items.",
+    "preparation": "Keep hazardous or electronic items out of general waste until you confirm the correct collection route.",
+    "local_check": true
+  }
+}

@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07191c">
+  <meta name="description" content="Know your waste and make the right choice. Scan an item for clear, practical disposal guidance with Smart Waste.">
+  <title>Smart Waste — Know your waste. Make the right choice.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-shell">
+      <a class="brand" href="index.html" aria-label="Smart Waste home">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M19.8 4.2C12 4.1 7.2 6.3 6.1 11.1c-.6 2.7 1.1 4.7 3.6 4.7 4.8 0 8-5 10.1-11.6Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 20c2.4-4.8 5.7-7.6 10.2-9.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span>
+        <span>Smart Waste</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="explore.html">Explore</a></li>
+          <li><a href="how-it-works.html">How It Works</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="faqs.html">FAQs</a></li>
+        </ul>
+      </nav>
+      <a class="button button-small nav-cta" href="#scanner"><span aria-hidden="true">📷</span><span>Scan Item</span></a>
+      <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <span class="eyebrow">A smarter, more sustainable future</span>
+          <h1>Know your waste. Make the right choice.</h1>
+          <p class="hero-quote">“What we save, saves us.”</p>
+          <p class="hero-description">Upload or scan an item and get clear guidance on what to do with it. Small, informed choices add up.</p>
+          <div class="hero-actions">
+            <a class="button" href="#scanner"><span aria-hidden="true">📷</span> Scan / Upload Item</a>
+            <a class="button button-secondary" href="how-it-works.html">See how it works <span aria-hidden="true">→</span></a>
+          </div>
+          <p class="hero-note"><span class="status-dot" aria-hidden="true"></span> Your image is analyzed for this scan and is not saved by this app.</p>
+        </div>
+        <div class="hero-visual reveal">
+          <img src="assets/tree-canopy.jpg" alt="Sunlight and blue sky framed by a canopy of green tree branches" fetchpriority="high" width="1294" height="740">
+          <div class="hero-badge"><span class="status-dot" aria-hidden="true"></span> AI analysis ready</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="value-band" aria-label="How Smart Waste helps">
+      <div class="container value-grid">
+        <article class="value-item"><span class="number-icon" aria-hidden="true">01</span><div><h3>Identify</h3><p>Start with the item and material we can see.</p></div></article>
+        <article class="value-item"><span class="number-icon" aria-hidden="true">02</span><div><h3>Understand</h3><p>Consider visible condition and where it is being sorted.</p></div></article>
+        <article class="value-item"><span class="number-icon" aria-hidden="true">03</span><div><h3>Decide</h3><p>Get a practical next step and a reason behind it.</p></div></article>
+      </div>
+    </section>
+
+    <section class="scan-section section" id="scanner">
+      <div class="container scan-layout">
+        <div class="scan-intro reveal">
+          <span class="eyebrow">Start with one item</span>
+          <h2>Not sure where it belongs?</h2>
+          <p>Choose a clear photo of one item. Smart Waste will identify what it can, then match that finding to practical disposal rules.</p>
+          <div class="scan-points">
+            <span><b>✓</b> JPG, PNG, or WEBP</span>
+            <span><b>✓</b> Up to 8 MB</span>
+            <span><b>✓</b> No account needed</span>
+          </div>
+        </div>
+        <form class="scanner-widget reveal" aria-label="Scan a waste item">
+          <div class="scanner-topline"><h3>Scan an item</h3><span class="privacy-note">Images are not stored by this app</span></div>
+          <label class="field-label" for="waste-context">Where are you sorting this item?</label>
+          <select id="waste-context" class="select-field context-field" name="context">
+            <option>Not sure</option>
+            <option>Home curbside</option>
+            <option>Public bin</option>
+            <option>Workplace</option>
+            <option>Community collection point</option>
+          </select>
+          <input class="image-input visually-hidden" type="file" name="image" accept="image/jpeg,image/png,image/webp" aria-label="Choose a JPG, PNG, or WEBP image">
+          <div class="dropzone" role="button" tabindex="0" aria-label="Choose an image or drop it here">
+            <div><span class="dropzone-icon" aria-hidden="true">＋</span><strong>Drop a photo here</strong><small>Or browse your device · JPG, PNG, WEBP · up to 8 MB</small><span class="button button-secondary button-small">Choose image</span></div>
+          </div>
+          <div class="preview-box" hidden>
+            <div class="preview-media"><img class="image-preview" alt=""><div><strong class="file-name"></strong><small class="file-size"></small></div></div>
+            <div class="preview-actions"><button class="replace-file" type="button">Replace</button><button class="remove-file" type="button">Remove</button></div>
+          </div>
+          <button class="button scan-submit" type="submit" disabled>Analyze item</button>
+          <div class="scan-state loading-state" role="status" aria-live="polite" hidden><span class="spinner" aria-hidden="true"></span><span>Looking closely at the item and checking disposal guidance…</span></div>
+          <div class="scan-state error-state" role="alert" hidden></div>
+          <section class="scan-state result-card" aria-live="polite" aria-label="Analysis result" hidden>
+            <div class="result-content"></div>
+            <button class="button button-secondary scan-another" type="button">Scan another item</button>
+          </section>
+        </form>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading reveal"><span class="eyebrow">A clear path from photo to action</span><h2>How it works</h2><p>Four simple steps help turn a quick scan into a more considered choice.</p></div>
+        <div class="steps-grid">
+          <article class="step-card reveal"><span class="card-icon" aria-hidden="true">📷</span><span class="card-index">Step 01</span><h3>Upload or scan</h3><p>Choose a well-lit photo that shows one item clearly.</p></article>
+          <article class="step-card reveal"><span class="card-icon" aria-hidden="true">⌕</span><span class="card-index">Step 02</span><h3>AI looks closely</h3><p>The vision model estimates the item, material, and visible condition.</p></article>
+          <article class="step-card reveal"><span class="card-icon" aria-hidden="true">◉</span><span class="card-index">Step 03</span><h3>Rules add context</h3><p>A separate decision engine checks how the item should be handled.</p></article>
+          <article class="step-card reveal"><span class="card-icon" aria-hidden="true">↗</span><span class="card-index">Step 04</span><h3>Choose your next step</h3><p>Get a recommendation, preparation tip, and an honest confidence level.</p></article>
+        </div>
+        <div class="section-action"><a class="button-link" href="how-it-works.html">Learn how it works <span aria-hidden="true">→</span></a></div>
+      </div>
+    </section>
+
+    <section class="section no-top-padding">
+      <div class="container">
+        <div class="section-heading reveal"><span class="eyebrow">Everyday materials</span><h2>What can it identify?</h2><p>Start with common household items, from a clean bottle to a device that needs specialist collection.</p></div>
+        <div class="categories-grid">
+          <article class="category-card reveal"><div class="category-card-top"><span class="card-icon" aria-hidden="true">♳</span><h3>Plastic</h3></div><p>Rigid bottles, tubs, and containers, with attention to residue and flexible film.</p><p class="category-items">Bottles · food tubs · bags</p></article>
+          <article class="category-card reveal"><div class="category-card-top"><span class="card-icon" aria-hidden="true">▤</span><h3>Paper</h3></div><p>Paper and cardboard where dryness and food stains can change the next step.</p><p class="category-items">Boxes · mail · paperboard</p></article>
+          <article class="category-card reveal"><div class="category-card-top"><span class="card-icon" aria-hidden="true">♢</span><h3>Glass</h3></div><p>Bottles and jars, with a safety reminder for broken pieces.</p><p class="category-items">Jars · bottles · shards</p></article>
+          <article class="category-card reveal"><div class="category-card-top"><span class="card-icon" aria-hidden="true">▣</span><h3>Metal</h3></div><p>Common cans and metal containers that may be recoverable locally.</p><p class="category-items">Food cans · drink cans</p></article>
+          <article class="category-card reveal"><div class="category-card-top"><span class="card-icon" aria-hidden="true">❋</span><h3>Organic</h3></div><p>Food and garden scraps that may suit a home or municipal compost program.</p><p class="category-items">Peels · grounds · leaves</p></article>
+          <article class="category-card reveal"><div class="category-card-top"><span class="card-icon" aria-hidden="true">⌁</span><h3>E-waste</h3></div><p>Electronics and batteries that should go to a dedicated collection point.</p><p class="category-items">Phones · cables · batteries</p></article>
+        </div>
+        <div class="section-action"><a class="button-link" href="explore.html">Explore all categories <span aria-hidden="true">→</span></a></div>
+      </div>
+    </section>
+
+    <section class="section-sm">
+      <div class="container"><div class="cta-panel reveal"><div><h2>Not sure what to do with an item?</h2><p>Start with a photo. We’ll show what the image suggests and where local rules still matter.</p></div><a class="button" href="#scanner"><span aria-hidden="true">📷</span> Scan Item</a></div></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand"><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M19.8 4.2C12 4.1 7.2 6.3 6.1 11.1c-.6 2.7 1.1 4.7 3.6 4.7 4.8 0 8-5 10.1-11.6Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 20c2.4-4.8 5.7-7.6 10.2-9.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span><span>Smart Waste</span></a><p>A little more clarity for the everyday choices that shape a sustainable future.</p></div>
+        <div class="footer-links">
+          <div><h2>Explore</h2><a href="explore.html">Waste categories</a><a href="how-it-works.html">How it works</a></div>
+          <div><h2>About</h2><a href="about.html">Our approach</a><a href="faqs.html">Frequently asked questions</a></div>
+          <div><h2>Get started</h2><a href="#scanner">Scan an item</a><a href="https://github.com/search?q=smart-waste&type=repositories" target="_blank" rel="noopener noreferrer">Find Smart Waste on GitHub</a></div>
+        </div>
+      </div>
+      <div class="footer-bottom"><p>Smart Waste offers general guidance, not a guarantee of local acceptance. Always follow your municipality’s collection rules, especially for hazardous, electronic, and mixed-material items.</p><span>© <span data-current-year></span> Smart Waste</span></div>
+    </div>
+  </footer>
+</body>
+</html>
